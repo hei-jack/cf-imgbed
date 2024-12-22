@@ -12,7 +12,8 @@ export const imageController = {
                 return c.json({ success: false, message: '请选择有效的图片文件' }, 400)
             }
 
-            if (imgfile.size > 10 * 1024 * 1024) {
+            // mp4文件不限制文件大小
+            if (imgfile.type != "mp4" && imgfile.size > 10 * 1024 * 1024) {
                 return c.json({ success: false, message: '文件大小不能超过10MB' }, 400)
             }
 
