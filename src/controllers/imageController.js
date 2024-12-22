@@ -13,7 +13,7 @@ export const imageController = {
             }
 
             // mp4文件不限制文件大小
-            if (imgfile.type.indexOf("video/") !== -1 && imgfile.size > 10 * 1024 * 1024) {
+            if (imgfile.type !== "video/mp4" && imgfile.size > 10 * 1024 * 1024) {
                 return c.json({ success: false, message: '文件大小不能超过10MB' }, 400)
             }
 
