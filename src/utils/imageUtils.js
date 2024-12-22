@@ -11,7 +11,8 @@ export const MIME_TYPES = {
     'ico': 'image/x-icon',
     'avif': 'image/avif',
     'heic': 'image/heic',
-    'heif': 'image/heif'
+    'heif': 'image/heif',
+    'mp4': 'video/mp4',
 };
 
 export const isValidImageType = (mimeType) => {
